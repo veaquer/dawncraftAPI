@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.github.veaquer'
-version = '1.0.1'
+version = '1.0.2'
 project.ext.jomlVersion = "1.10.0"
 project.ext.jomlPrimVersion = "1.10.0"
 
