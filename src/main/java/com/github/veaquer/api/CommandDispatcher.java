@@ -1,4 +1,4 @@
-package org.example.api;
+package com.github.veaquer.api;
 
 import java.util.HashMap;
 import java.util.Map;

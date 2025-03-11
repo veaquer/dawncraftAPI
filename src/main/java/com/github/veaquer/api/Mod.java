@@ -1,4 +1,4 @@
-package org.example.api;
+package com.github.veaquer.api;
 
 public interface Mod {
     void onInit(CommandDispatcher dispatcher);
