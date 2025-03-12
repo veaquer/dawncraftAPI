@@ -6,7 +6,7 @@ import java.util.function.Function;
 
 public class CommandDispatcher {
     private final Map<String, CommandHandler> handlers = new HashMap<>();
-    private final Map<String, Function<String[], String>> queries = new HashMap<>();
+    private final Map<String, Function<String[], String[]>> queries = new HashMap<>();
 
     public interface CommandHandler {
         void handle(String[] args);
@@ -16,7 +16,7 @@ public class CommandDispatcher {
         handlers.put(name, handler);
     }
 
-    public void registerQuery(String name, Function<String[], String> query) {
+    public void registerQuery(String name, Function<String[], String[]> query) {
         queries.put(name, query);
     }
 
@@ -29,12 +29,12 @@ public class CommandDispatcher {
         }
     }
 
-    public String query(String queryName, String[] args) {
-        Function<String[], String> query = queries.get(queryName);
+    public String[] query(String queryName, String[] args) {
+        Function<String[], String[]> query = queries.get(queryName);
         if (query != null) {
             return query.apply(args);
         } else {
-            return "Unknown query: " + queryName;
+            return new String[]{"Unknown query: " + queryName};
         }
     }
 }
