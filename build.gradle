@@ -42,6 +42,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly 'org.projectlombok:lombok:1.18.36'
+
+    implementation 'org.lwjgl:lwjgl:3.3.2'
+    implementation 'org.lwjgl:lwjgl-glfw:3.3.2'
 }
 
 test {
