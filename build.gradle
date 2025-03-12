@@ -4,7 +4,8 @@ plugins {
 }
 
 group = 'com.github.veaquer'
-version = '1.0.4'
+version = '1.0.5'
+project.ext.lwjglVersion = "3.3.6"
 project.ext.jomlVersion = "1.10.0"
 project.ext.jomlPrimVersion = "1.10.0"
 
@@ -43,8 +44,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.projectlombok/lombok
     compileOnly 'org.projectlombok:lombok:1.18.36'
 
-    implementation 'org.lwjgl:lwjgl:3.3.2'
-    implementation 'org.lwjgl:lwjgl-glfw:3.3.2'
+    implementation "org.lwjgl:lwjgl:${lwjglVersion}"
+    implementation "org.lwjgl:lwjgl-glfw:${lwjglVersion}"
 }
 
 test {
