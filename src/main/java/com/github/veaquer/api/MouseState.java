@@ -6,19 +6,19 @@ public enum MouseState {
     DISABLED(GLFW.GLFW_CURSOR_DISABLED),
     ENABLED(GLFW.GLFW_CURSOR_NORMAL);
 
-    private final int glfwKey;
+    private final int mouseState;
 
-    MouseState(int glfwKey) {
-        this.glfwKey = glfwKey;
+    MouseState(int mouseState) {
+        this.mouseState = mouseState;
     }
 
-    public int getGlfwKey() {
-        return glfwKey;
+    public int getMouseState() {
+        return mouseState;
     }
 
-    public static GlfwKey fromString(String name) {
+    public static MouseState fromString(String name) {
         try {
-            return GlfwKey.valueOf(name.toUpperCase());
+            return MouseState.valueOf(name.toUpperCase());
         } catch (IllegalArgumentException e) {
             return null;
         }
